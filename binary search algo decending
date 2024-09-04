@@ -1,0 +1,32 @@
+import java.util.*;
+public class arr{
+    public static void main(String[] args) {
+        int[] arr= {26,23, 19, 17, 13, 9, 6, 2, -1, -4, -7, -10};
+         int target= 9;
+         System.out.println(check(arr, target));
+        }
+        // search algo
+        static int check(int[] arr, int target){
+            int start= 0;
+            int end=arr.length-1;
+            int mid=(start + (end-start)/2);
+            while(start <= end){
+                mid=(start + (end-start)/2);
+                if(arr[mid] < target){
+                    end = mid-1;
+                }
+                else if(arr[mid] > target){
+                    start = mid +1;
+                }
+                else{
+                    return mid+1;
+                }
+            }
+            return -1;
+        }
+        }
+    
+
+
+    
+    
